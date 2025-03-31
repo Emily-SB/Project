@@ -1,0 +1,101 @@
+body.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("/static/image.png") no-repeat center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.login-title {
+    color: #8e44ad;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    background: #eee;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 1;
+}
+
+.tab-btn.active {
+    background: #8e44ad;
+    color: white;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-btn {
+    background: #8e44ad;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background: #732d91;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-btn {
+    background: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-btn:hover {
+    background: #45a049;
+}

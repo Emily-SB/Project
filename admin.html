@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Fabulora</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- In the <head> section of all HTML files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <h1>Admin Dashboard</h1>
+       <!-- Inside profile.html -->
+<nav>
+    <form action="{{ url_for('logout') }}" method="GET" style="display: inline;">
+        <button type="submit" id="logout-btn" class="logout-btn">Logout</button>
+    </form>
+</nav>
+
+
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Manage Feedback</h2>
+        <ul id="feedback-list" class="feedback-list">
+            <!-- Feedback items will be added dynamically -->
+        </ul>
+    </main>
+
+    <script src="admin.js"></script>
+     <!-- At the end of the <body> -->
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='login.js') }}"></script>
+        <script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+
+</html>
+
+
+
+    
+   
+    
