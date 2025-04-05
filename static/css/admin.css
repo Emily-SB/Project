@@ -1,4 +1,3 @@
-/* Admin Dashboard Styling */
 .admin-body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #FF9E9D, #FFC0CB);
@@ -72,4 +71,53 @@
 
 .delete-btn:hover {
     background-color: #FF2E6D;
+}
+
+/* NEW: User Count Section */
+.user-count-section {
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-count-section h2 {
+    color: #6C4FBD;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#user-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+/* NEW: Generated Stories Section */
+.stories-section {
+    margin-top: 40px;
+}
+
+.stories-section h2 {
+    color: #8e44ad;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.story-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.story-list li {
+    background: #fff;
+    border-left: 4px solid #8e44ad;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 14px;
+    word-break: break-word;
 }
