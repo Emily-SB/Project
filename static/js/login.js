@@ -24,29 +24,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // --- User Login (AJAX) ---
-    userLoginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+userLoginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        const email = userLoginForm.querySelector("input[name='email']").value.trim();
-        const password = userLoginForm.querySelector("input[name='password']").value.trim();
+    const email = userLoginForm.querySelector("input[name='email']").value.trim();
+    const password = userLoginForm.querySelector("input[name='password']").value.trim();
 
-        fetch("/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = "/user"; // Redirect to user dashboard
-            } else {
-                alert("Invalid login credentials!");
-            }
-        })
-        .catch(error => {
-            console.error("Error during login:", error);
-        });
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('password', password);
+
+    fetch("/login", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data.includes("Invalid credentials")) {
+            alert("Invalid login credentials!");
+        } else {
+            window.location.href = "/profile"; // Redirect to user profile/dashboard
+        }
+    })
+    .catch(error => {
+        console.error("Error during login:", error);
     });
+});
 
     // --- Signup ---
     signupForm.addEventListener("submit", function (event) {
