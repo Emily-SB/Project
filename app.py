@@ -351,21 +351,35 @@ def generate():
         story_path = save_story_to_file(story_text)
         story_url = request.host_url.rstrip('/') + story_path
 
-        # ✅ Example Firestore saving logic (skip if not using)
-        # user_email = session['user']
-        # story_metadata = {
-        #     'url': story_url,
-        #     'timestamp': datetime.utcnow()
-        # }
-        # user_doc = db.collection('users').where('email', '==', user_email).get()
-        # if user_doc:
-        #     user_id = user_doc[0].id
-        #     db.collection('users').document(user_id).collection('stories').add(story_metadata)
+       # Save story metadata to Firestore
+        user_email = session['user']
+        
+        # Get user document by email
+        users_ref = db.collection('users')
+        query = users_ref.where('email', '==', user_email).limit(1)
+        docs = query.get()
+        
+        if len(docs) == 1:
+            user_id = docs[0].id
+            story_data = {
+                'url': story_url,
+                'text': story_text[:500] + '...',  # Save first 500 chars as preview
+                'full_text_path': story_path,
+                'timestamp': firestore.SERVER_TIMESTAMP,
+                'title': story_text.split('\n')[0] if '\n' in story_text else 'Untitled'
+            }
+            
+            # Add to user's stories subcollection
+            db.collection('users').document(user_id).collection('stories').add(story_data)
+        else:
+            print(f"User with email {user_email} not found")
 
         return jsonify({
             'story': story_text,
-            'story_url': story_url
-        })
+            'story_url': story_url,
+            'success': True
+             })
+        
 
     except Exception as e:
         print("Error:", e)
