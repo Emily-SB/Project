@@ -77,18 +77,4 @@ userLoginForm.addEventListener("submit", function (event) {
         })
         .catch(error => console.error("Signup error:", error));
     });
-
-    // --- Admin Login ---
-    adminLoginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const adminUsername = document.querySelector("#admin-login input[name='username']").value.trim();
-        const adminPassword = document.querySelector("#admin-login input[name='password']").value.trim();
-
-        if (adminUsername === "Emil" && adminPassword === "123") {
-            window.location.href = "/admin"; // Adjust to your actual admin route
-        } else {
-            alert("Invalid admin credentials! Please try again.");
-        }
-    });
 });
