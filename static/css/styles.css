@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f7bff2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,20 +10,20 @@ body {
 
 h1, h2 {
     font-family: 'Quicksand', sans-serif;
-    color: #6C4FBD;
+    color: #180843;
     margin: 0;
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #f5e1f7;
-    color: #6C4FBD;
+    background-color: #ecd1e0;
+    color: #1d0856;
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #d8a7f5;
+    border-bottom: 2px solid #23112e;
 }
 
 header .logo h1 {
@@ -38,7 +38,7 @@ header nav {
 }
 
 header nav a {
-    color: #6C4FBD;
+    color: #512659;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -46,7 +46,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #9b7ede;
+    color: #2a0b73;
 }
 
 /* Hero Section */
@@ -59,7 +59,7 @@ header nav a:hover {
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #6C4FBD;
+    color: #0f0234;
     margin-bottom: 20px;
 }
 
@@ -69,7 +69,7 @@ header nav a:hover {
 }
 
 .cta-btn {
-    background-color: #6C4FBD;
+    background-color: #0f0232;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -82,12 +82,12 @@ header nav a:hover {
 }
 
 .cta-btn:hover {
-    background-color: #9b7ede;
+    background-color: #1c005f;
 }
 
 /* Upload Section */
 .upload-section {
-    background-color: #ffffff;
+    background-color: #ffb8e0;
     padding: 40px;
     margin: 40px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -95,7 +95,7 @@ header nav a:hover {
 }
 
 .upload-section h2 {
-    color: #6C4FBD;
+    color: #0f0233;
 }
 
 .upload-container {
@@ -126,7 +126,7 @@ header nav a:hover {
 
 /* Story Section */
 .story-section {
-    background-color: #ffffff;
+    background-color: #ffb8e0;
     padding: 40px;
     margin: 40px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -145,7 +145,7 @@ header nav a:hover {
 }
 
 .feedback-section {
-    background-color: #ffffff;
+    background-color: #ffb8e0;
     padding: 40px;
     margin: 40px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -195,7 +195,7 @@ footer {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #c5a0c0;
     margin: 5% auto;
     padding: 20px;
     border-radius: 8px;
@@ -223,11 +223,11 @@ footer {
 }
 /* Hero Section Styling */
 .hero-section {
-    background: linear-gradient(135deg, #FF9E9D, #FFC0CB);
+    background: linear-gradient(135deg, #d7b4e0, #ab4ea8);
     padding: 100px 20px;
     text-align: center;
     color: #fff;
-    border-bottom: 5px solid #FF69B4;
+    border-bottom: 5px solid #290316;
 }
 
 .headline-container {
@@ -258,7 +258,7 @@ footer {
     margin-top: 30px;
     padding: 15px 40px;
     font-size: 1.2rem;
-    background-color: #FF69B4;
+    background-color: #870b49;
     color: white;
     border: none;
     border-radius: 50px;
@@ -268,7 +268,7 @@ footer {
 }
 
 .cta-btn:hover {
-    background-color: #FF4F8D;
+    background-color: #3b0216;
 }
 
 /* Animations */
@@ -295,11 +295,11 @@ footer {
 }
 /* Profile Hero Section */
 .profile-hero {
-    background: linear-gradient(135deg, #FF9E9D, #FFC0CB);
+    background: linear-gradient(135deg,  #cd99da, #ad36a9);
     padding: 100px 20px;
     text-align: center;
     color: #fff;
-    border-bottom: 5px solid #FF69B4;
+    border-bottom: 5px solid #cb6ac3;
 }
 
 .saved-stories {
@@ -314,7 +314,7 @@ footer {
 
 .saved-stories h2 {
     font-size: 2rem;
-    color: #6C4FBD;
+    color: #120439;
 }
 
 .empty-message {
@@ -324,7 +324,7 @@ footer {
 }
 
 .story-card {
-    background-color: #f9f3f9;
+    background-color: #b749b7;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -352,4 +352,3 @@ nav a.active {
     font-weight: bold;
     color: #FF69B4;
 }
-

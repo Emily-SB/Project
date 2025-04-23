@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Fabulora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <!-- In the <head> section of all HTML files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <h1>Admin Dashboard</h1>
+        <!-- Inside profile.html -->
+        <nav>
+            <form action="{{ url_for('logout') }}" method="GET" style="display: inline;">
+                <button type="submit" id="logout-btn" class="logout-btn">Logout</button>
+            </form>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Manage Feedback</h2>
+        <ul id="feedback-list" class="feedback-list">
+            <!-- Feedback items will be added dynamically -->
+        </ul>
+
+        <!-- NEW: Total User Count -->
+        <section class="user-count-section">
+            <h2>Total Users</h2>
+            <p id="user-count">Loading...</p>
+        </section>
+
+        <!-- NEW: Generated Stories -->
+        <section class="stories-section">
+            <h2>Generated Stories</h2>
+            <ul id="story-list" class="story-list">
+                <!-- Stories will be populated dynamically -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+    <!-- At the end of the <body> -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
+ 
